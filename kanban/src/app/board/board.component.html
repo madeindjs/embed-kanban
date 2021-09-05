@@ -1,21 +1,14 @@
 <div class="Board">
   <div class="Board-Title">
-    Board <strong>{{ name$ | async }}</strong>
+    Board <strong>{{ (board$ | async)?.name }}</strong>
   </div>
 
   <div class="Board-Columns">
     <app-column
       *ngFor="let column of columns$ | async"
-      [column]="column.column"
+      [column]="column"
       [apiUrl]="apiUrl"
-      (onCardCreated)="onCardCreated()"
     >
-      <app-card
-        *ngFor="let card of column.cards; trackBy: cardTrackBy"
-        [card]="card"
-        [apiUrl]="apiUrl"
-        (onRemoved)="onCardRemoved()"
-      ></app-card>
     </app-column>
   </div>
 </div>

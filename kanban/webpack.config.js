@@ -52,7 +52,7 @@ module.exports = {
           strictVersion: true,
           requiredVersion: "auto",
         },
-        "@angular/router": {
+        "@ngrx/store": {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",

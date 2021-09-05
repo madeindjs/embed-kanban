@@ -56,6 +56,11 @@ module.exports = {
           strictVersion: true,
           requiredVersion: "auto",
         },
+        "@ngrx/store": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
 
         ...sharedMappings.getDescriptors(),
       }),

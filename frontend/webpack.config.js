@@ -12,6 +12,8 @@ module.exports = {
   output: {
     uniqueName: "frontend",
     publicPath: "auto",
+    filename: "[name].js",
+    chunkFilename: "[name].js",
   },
   optimization: {
     runtimeChunk: false,

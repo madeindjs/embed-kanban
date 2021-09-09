@@ -2,9 +2,9 @@
 
 This is a monorepo of Embed Kanban with theses repositories
 
-- [component](./component/README.md), this is the component
+- [kanban](./kanban/README.md), this is the Kanban component exported with [module federation](https://webpack.js.org/concepts/module-federation/)
 - [backend](./backend/README.md), server to create API key and save Kanban state
-- [frontend](./backend/README.md), frontend to manage your API keys
+- [frontend](./frontend/README.md), frontend to manage your API keys
 
 ## Setup
 

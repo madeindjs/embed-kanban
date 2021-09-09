@@ -2,6 +2,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
+const webpack = require("webpack");
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(path.join(__dirname, "tsconfig.json"), [
@@ -22,6 +23,9 @@ module.exports = {
     },
   },
   plugins: [
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1,
+    }),
     new ModuleFederationPlugin({
       // For remotes (please adjust)
       name: "kanban",
@@ -48,11 +52,6 @@ module.exports = {
           requiredVersion: "auto",
         },
         "@angular/common/http": {
-          singleton: true,
-          strictVersion: true,
-          requiredVersion: "auto",
-        },
-        "@angular/router": {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embed Kanban</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1>Embed Kanban</h1>
+      <p>Build a kanban for anywhere</p>
+      <div id="kanban-board-wrapper">
+        <kanban-board></kanban-board>
+      </div>
+    </nav>
+    <main>
+      <section>
+        <h2>Build a kanban</h2>
+        <p>
+          <strong>Embed Kanban</strong> help you to import a kanban anywhere
+          without any backend. You just need to
+          <a href="http://app.lvh.me/signin">create an account</a> and get an
+          API key. That's it!
+        </p>
+        <a href="http://app.lvh.me/signin" class="btn">Sign-in</a>
+      </section>
+      <section>
+        <h2>Example</h2>
+        <p>This is the landing page</p>
+        <a href="http://app.lvh.me" class="btn">Create a new kanban</a>
+      </section>
+      <section>
+        <h2>Open-source</h2>
+        <p>This project is open-source and you can host it yourself.</p>
+        <a href="https://github.com/madeindjs/embed-kanban" class="btn"
+          >Take a look on Github</a
+        >
+      </section>
+    </main>
+    <footer>
+      Build for testing purposes. Take a look of
+      <a href="https://github.com/madeindjs/embed-kanban">Github repository</a>
+    </footer>
+    <script src="http://kanban.lvh.me/polyfills.js"></script>
+    <script src="http://kanban.lvh.me/main.js"></script>
+    <script src="http://kanban.lvh.me/533.js"></script>
+    <link rel="stylesheet" href="http://app.lvh.me/styles.css" />
+    <script>
+      const section = document.getElementById("kanban-board-wrapper");
+    </script>
+  </body>
+</html>
